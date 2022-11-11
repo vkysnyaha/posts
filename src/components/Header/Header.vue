@@ -2,8 +2,9 @@
     <div class='header' v-if='getAuth'>
         <nav class='nav'>
             <div class='nav-left'>
-                <Button type='danger'> Мои посты </Button>
-                <Button type='danger' @click='setInputValue'> {{ buttonValue }} </Button>
+                <Button type='danger' @click='$router.push("/posts")'> Не мои посты </Button>
+                <Button type='danger' @click='$router.push("/my-posts")'> Мои посты </Button>
+                <Button type='danger' @click='setInputValue'> {{ buttonCreatePost }} </Button>
             </div>
             <Button type='danger' @click='logout'> Выйти </Button>
         </nav>
@@ -25,7 +26,7 @@ export default {
 
     data() {
         return {
-            buttonValue: 'Создать пост',
+            buttonCreatePost: 'Создать пост',
             confirmValue: false
         }
     },

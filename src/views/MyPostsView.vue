@@ -1,15 +1,15 @@
 <template>
-    <MyPost />
+    <MyPosts />
 </template>
 
 <script>
-import MyPost from '@/components/Posts/MyPosts.vue'
+import MyPosts from '@/components/Posts/MyPosts.vue'
 
 export default {
-    name: 'MyPostView',
-    
+    name: 'MyPostsView',
+
     components: {
-        MyPost
+        MyPosts
     }
 }
 </script>

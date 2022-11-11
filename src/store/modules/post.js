@@ -17,7 +17,7 @@ export default {
         return api.getPostsList(page)
           .then((response) => {
             context.state.posts = response.data.articles
-            debugger
+            // debugger
           })
           .catch((error) => {
           })

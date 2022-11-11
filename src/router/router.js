@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import store from '@/store/index.js'
+import Posts from '@/views/PostsView.vue'
 import MyPosts from '@/views/MyPostsView.vue'
 import Auth from '@/views/AuthView.vue'
 import Register from '@/views/RegisterView.vue'
@@ -12,6 +13,14 @@ const routes = [
   {
     path: '/posts',
     name: 'posts',
+    meta: {
+      loginRequired: true
+    },
+    component: Posts,
+  },
+  {
+    path: '/my-posts',
+    name: 'my-posts',
     meta: {
       loginRequired: true
     },
